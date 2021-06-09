@@ -1,8 +1,8 @@
 from math import comb
 t=3
-v=16
-k=7
-l=5
+v=8
+k=4
+l=1
 
 num_blocks = l*comb(v,t)/comb(k,t)
 colsum = num_blocks*k/v
