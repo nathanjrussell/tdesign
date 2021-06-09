@@ -15,6 +15,7 @@ rv(V,R) :- block(V1,V2,V3,V4,R), V2=V, sym(V1), sym(V2), sym(V3), sym(V4).
 rv(V,R) :- block(V1,V2,V3,V4,R), V3=V, sym(V1), sym(V2), sym(V3), sym(V4).
 rv(V,R) :- block(V1,V2,V3,V4,R), V4=V, sym(V1), sym(V2), sym(V3), sym(V4).
 
+:- block(V1,V2,V3,V4,N1), block(V1,V2,V3,V4,N2), N1 != N2.
 
 %value V is not in row R
 nrv(V,R) :- not rv(V,R), sym(V), blocknum(R).
